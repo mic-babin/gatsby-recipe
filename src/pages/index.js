@@ -15,6 +15,7 @@ const Home = () => {
             </div>
           </div>
         </header>
+      
       </main>
     </Layout>
   )
