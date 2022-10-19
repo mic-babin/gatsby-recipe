@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import RecipesList from "../components/recipesList"
+import SEO from "../components/SEO"
 
 const featuredRecipes = graphql`
   {
@@ -27,6 +28,7 @@ const About = () => {
   const {allContentfulRecipes: { nodes: recipes}} = useStaticQuery(featuredRecipes)
   return (
     <Layout>
+      <SEO title='About' />
       <main className="page">
         <section className="about-page">
           <article>

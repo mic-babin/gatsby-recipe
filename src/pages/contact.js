@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, useStaticQuery } from "gatsby"
 import RecipesList from "../components/recipesList"
+import SEO from "../components/SEO"
 
 const featuredRecipes = graphql`
   {
@@ -26,6 +27,7 @@ const Contact = () => {
   const {allContentfulRecipes: { nodes: recipes}} = useStaticQuery(featuredRecipes)
   return (
     <Layout>
+      <SEO title='Contact' />
       <main className="page">
           <section className="contact-page">
           <article className="contact-info">
